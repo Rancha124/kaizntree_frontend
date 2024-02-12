@@ -1,0 +1,128 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 328px;
+    margin: 20px auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.error-message {
+    color: red;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.kaizntree-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    img {
+        width: 30%;
+        min-width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .kaizntree-text {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+}
+
+
+.input-field {
+    margin-bottom: 20px;
+    height: 30px;
+    width: 100%;
+    border: 0.5px solid rgb(245, 243, 243);
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+}
+
+.input-field::placeholder {
+    font-size: 16px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: inherit;
+    width: 107%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    button {
+        background-image: linear-gradient(to bottom, white, #f0f0f0);
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        text-align: left;
+        width: 100%;
+    }
+
+    .create-account {
+        width: 180px;
+        font-family: inherit;
+        font-weight: bolder;
+    }
+
+    .login {
+        width: 80px;
+        font-family: inherit;
+        font-weight: bolder;
+    }
+}
+
+.forgot-password {
+    text-align: left;
+    width: 100%;
+
+    .forgot-password-btn {
+        background: none;
+        border: none;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+        font-family: inherit;
+        font-size: inherit;
+
+    }
+}
+
+
+.forgot-password-btn:hover,
+.forgot-password-btn:focus {
+    color: darkblue;
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+    }
+
+    .logo {
+        width: 40%;
+        /* Larger percentage for smaller screens */
+    }
+
+    .kaizntree-text {
+        font-size: 1.2rem;
+        /* Slightly smaller text on smaller screens */
+    }
+}

@@ -1,0 +1,344 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.side-panel {
+    width: 25%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.side-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-panel li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item-table {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.item-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.item-table th,
+.item-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.item-table th {
+    background-color: #f2f2f2;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.title h1,
+.title p {
+    margin: 0;
+    padding: 5px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.stats-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.title p {
+    text-align: left;
+}
+
+.dashboard-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 5px;
+    width: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-stats {
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .dashboard-stats {
+        align-items: center;
+    }
+}
+
+.new-category {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+.add-item-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 300px;
+    padding: 5px 0;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.sorting-select {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    padding: 5px 30px 5px 5px;
+}
+
+.sorting-select::-ms-expand {
+    display: none;
+}
+
+.search-button {
+    position: relative;
+    right: 20px;
+}
+
+.search-button,
+.sorting-select {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sorting-options {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    right: 1%;
+}
+
+.sorting-options div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.sorting-options div:hover {
+    background-color: #f0f0f0;
+}
+
+.date-filter-button {
+    padding: 8px 12px;
+    background-color: rgb(41, 33, 33);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.date-filter-button:hover {
+    background-color: gray;
+}
+
+.date-filter-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, .25);
+}
+
+.date-filter-button .faCalendarAlt {
+    font-size: 1.25rem;
+}
+
+.query-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.date-filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.date-filter-options {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.date-filter-options input {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.sorting-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sort-button {
+    padding: 8px 12px;
+    background-color: black;
+    border: none;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sort-button:hover {
+    background-color: gray;
+}
+
+.sort-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, .25);
+}
+
+.sorting-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 130px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.sorting-options div {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sorting-options div:hover {
+    background-color: #f8f9fa;
+}

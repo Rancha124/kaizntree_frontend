@@ -5,6 +5,7 @@ import AddItemForm from './AddItemForm';
 import AddCategoryForm from './components/AddCategory/AddCategoryForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faFilter, faNetworkWired, faShapes, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const DashboardComponent = () => {
     const [items, setItems] = useState([]);
@@ -12,7 +13,9 @@ const DashboardComponent = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [sortKey, setSortKey] = useState('name');
     const [searchTerm, setSearchTerm] = useState('');
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+    const navigate = useNavigate()
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [isCategoryFormVisible, setIsCategoryFormVisible] = useState(false);
     const [categoriesCount, setCategoriesCount] = useState(0);
@@ -117,6 +120,11 @@ const DashboardComponent = () => {
         }
     };
 
+    const handleLogOut = () => {
+        localStorage.removeItem('token');
+        navigate('/');
+    }
+
 
     useEffect(() => {
         fetchItems();
@@ -134,14 +142,29 @@ const DashboardComponent = () => {
 
     return (
         <div className="dashboard">
-            <div className="side-panel">
+            <button className="burger-menu" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                ☰
+            </button>
+            <div className={`side-panel ${isSidebarOpen ? 'open' : 'closed'}`}>
                 <ul>
                     <li>Home</li>
                     <li>Items</li>
                     <li>Stock</li>
                     <li>Build</li>
+                    <li>Customers</li>
+                    <li>Sales Orders</li>
+                    <li>Suppliers</li>
+                    <li>Purchase Orders</li>
+                    <li>Reports</li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li>Integrations</li>
+                    <li onClick={handleLogOut} >Logout</li>
+                    <li>My Profile</li>
                 </ul>
             </div>
+
 
             <div className="dashboard-container">
                 <div className='dashboard-header'>
@@ -226,8 +249,6 @@ const DashboardComponent = () => {
 
                     </div>
                 </div>
-
-
                 <div className="item-table">
                     <table>
                         <thead>

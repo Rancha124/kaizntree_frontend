@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Frontend Application for Django-React Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project's frontend is constructed with React, providing dynamic and responsive user interfaces for the management of items and categories within our application. It encompasses a range of features designed to enhance user interaction and data management efficiency.
 
-## Available Scripts
+## Features
+- **Add New Items**: Users can add new items by filling out a form, allowing immediate updates to the backend database.
+- **Add New Categories**: This feature enables users to create new categories, aiding in the effective organization of items.
+- **Items Display Table**: A detailed table displays all items, incorporating options to view, edit, or delete directly from the interface.
+- **Search Functionality**: Users can search for items using keywords, facilitating easy access to relevant items.
+- **Sorting Options**: Items can be sorted based on various attributes like name, stock status, or available stock, enhancing the user's ability to organize and view data.
+- **Date Filtering**: This feature allows users to filter items based on the creation date, enabling them to view items within a specific date range.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (version 12 or above)
+- [npm](https://www.npmjs.com/) (bundled with Node.js)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository**:
+   Clone the project repository to your local machine with:
+   ```git clone https://github.com/Rancha124/kaizntree_frontend.git```
 
-### `npm test`
+2. **Navigate to the Frontend Directory**:
+```cd kaizntree_frontend```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Install Dependencies**:
+```npm install```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Run the Application**:
+```npm start```

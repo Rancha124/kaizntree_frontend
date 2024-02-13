@@ -1,6 +1,7 @@
 .dashboard {
     display: flex;
     height: 100vh;
+    font-weight: 800;
 }
 
 .burger-menu {
